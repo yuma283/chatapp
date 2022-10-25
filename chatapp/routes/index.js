@@ -11,9 +11,8 @@ router.get('/', function(request, response, next) {
 
 // チャット画面の表示
 router.post('/room', function(request, response, next) {
-  const userName = $('#userName').val();
     console.log('ユーザ名：' + request.body.userName);
-    response.render('room', { myname: userName });
+    response.render('room', { userName: request.body.userName });
 });
 
 module.exports = router;
