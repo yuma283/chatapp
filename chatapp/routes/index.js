@@ -2,6 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
+const userName = $('#userName').val();
 
 // ログイン画面の表示
 router.get('/', function(request, response, next) {
