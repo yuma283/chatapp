@@ -8,9 +8,4 @@ function enter() {
 
 
     $('form').submit();
-    router.get('/room', function(request, response) {
-      // views/rakus.hbs を表示する
-      // 第2引数で views/rakus.hbs の {{title}}, {{message}} に表示する文字をセットしている
-      response.render('room', {login_user:userName/* ここに表示したい値を記述する */});
-    });
 }
