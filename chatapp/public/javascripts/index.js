@@ -7,7 +7,8 @@ function enter() {
     // ユーザ名が未入力でないかチェックする
     //未入力であったら、エラー画面へ
     if (userName === ''){
-      location.href='./error.hbs';
+      //location.href='./error.hbs';
+      alert("ユーザ名を入力して入室してください");
     }else{
       $('form').submit();
     }
