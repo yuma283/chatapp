@@ -3,9 +3,11 @@
 // 投稿メッセージをサーバに送信する
 function publish() {
     // ユーザ名を取得
-    const userName = '';
+    const userName = $('#userName').val();
+    console.log(userName)
     // 入力されたメッセージを取得
-    const message = $('#message').val();;
+    const input_message = $('#message').val();;
+    const message = userName + "さん：" + input_message
     // 投稿内容を送信
     // メッセージ入力イベント（sendMessageEvent）を送信する
     socket.emit('sendMessageEvent', message);
