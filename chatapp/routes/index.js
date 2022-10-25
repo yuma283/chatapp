@@ -6,7 +6,6 @@ const router = express.Router();
 
 // ログイン画面の表示
 router.get('/', function(request, response, next) {
-    const userName = $('#userName').val();
     response.render('index');
 });
 
