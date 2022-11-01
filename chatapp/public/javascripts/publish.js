@@ -34,7 +34,7 @@ function publish() {
         userName + "さん：\n" + input_message + "\n（" + formatNowDate + "）";
     // 投稿内容を送信
     // 内容が空白なら送信しない
-    if(input_message===""){
+    if(!input_message.match(/\S/g)){
         alert("内容を記入してください")
         return;
     }
