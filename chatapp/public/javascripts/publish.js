@@ -6,8 +6,19 @@ function publish() {
     const userName = $('#userName').val();
     console.log(userName)
     // 入力されたメッセージを取得
-    const input_message = $('#message').val();;
-    const message = userName + "さん：" + input_message
+    const input_message = $('#message').val();
+
+    // 時刻を取得
+    var now = new Date(); 
+    var YYYY = now.getFullYear();
+    var MM = now.getMonth()+1;
+    var DD = now.getDate();
+    var HH = now.getHours();
+    var mm = now.getMinutes();
+    var formatNowDate = YYYY + "/" + MM + "/" + DD + " " + HH + ":" + mm;
+    // 時刻をメッセージに追加
+    const message = userName + "さん：" + input_message + "（" + formatNowDate + "）";
+
     // 投稿内容を送信
     // メッセージ入力イベント（sendMessageEvent）を送信する
     socket.emit('sendMessageEvent', message);
