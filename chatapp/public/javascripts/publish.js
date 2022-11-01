@@ -28,7 +28,7 @@ function publish() {
     const message =
         userName + "さん：" + input_message + "（" + formatNowDate + "）";
     // 最後にメッセージを送信したユーザーを変えるイベントの送信
-    socekt.emit("sendchangeUserEvent", userName);
+    socket.emit("sendchangeUserEvent", userName);
     // 投稿内容を送信
     // メッセージ入力イベント（sendMessageEvent）を送信する
     socket.emit("sendMessageEvent", message);
