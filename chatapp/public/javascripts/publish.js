@@ -23,6 +23,11 @@ function publish() {
     var DD = now.getDate();
     var HH = now.getHours();
     var mm = now.getMinutes();
+    // 分数の桁揃え
+    if (mm < 10){
+        mm = "0" + mm;
+    }
+    // フォーマットに代入
     var formatNowDate = YYYY + "/" + MM + "/" + DD + " " + HH + ":" + mm;
     // 時刻をメッセージに追加
     const message =
