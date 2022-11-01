@@ -30,6 +30,14 @@ function publish() {
     // 最後にメッセージを送信したユーザーを変えるイベントの送信
     socket.emit("sendchangeUserEvent", userName);
     // 投稿内容を送信
+    // 内容が空白なら送信しない
+    if(input_message===""){
+        alert("内容を記入してください")
+        return;
+    }
+    // 最後にメッセージを送信したユーザーを変えるイベントの送信
+    socket.emit('sendchangeUserEvent',userName);
+    // 投稿内容を送信
     // メッセージ入力イベント（sendMessageEvent）を送信する
     socket.emit("sendMessageEvent", message);
     return false;
