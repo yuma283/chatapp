@@ -16,5 +16,12 @@ function publish() {
 
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
-    $('#thread').prepend('<p>' + data + '</p>');
+    //自分のユーザネームを格納
+    const myname = $('#userName').val();
+    //自分だったら文字を青く
+    if (data.indexOf(myname) !== -1){
+      $('#thread').prepend('<p style="color:blue">' + data + '</p>');
+    }else{
+      $('#thread').prepend('<p>' + data + '</p>');
+    }
 });
