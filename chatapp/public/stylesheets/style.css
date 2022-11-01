@@ -51,7 +51,7 @@ div {
  }
 
 .room-message {
-
+  
 }
 
 .room-message_textarea {
@@ -72,6 +72,9 @@ div {
 
 .room-thread {
 
+}
+#thread {
+    white-space: pre-wrap;
 }
 
 .room-exit {

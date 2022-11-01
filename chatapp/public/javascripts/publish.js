@@ -31,7 +31,7 @@ function publish() {
     var formatNowDate = YYYY + "/" + MM + "/" + DD + " " + HH + ":" + mm;
     // 時刻をメッセージに追加
     const message =
-        userName + "さん：" + input_message + "（" + formatNowDate + "）";
+        userName + "さん：\n" + input_message + "\n（" + formatNowDate + "）";
     // 投稿内容を送信
     // 内容が空白なら送信しない
     if(input_message===""){
