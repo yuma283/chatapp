@@ -1,10 +1,18 @@
 'use strict';
 
+// 最後にメッセージを送信したユーザー
+var lastuser="";
+
 // 投稿メッセージをサーバに送信する
 function publish() {
     // ユーザ名を取得
     const userName = $('#userName').val();
     console.log(userName)
+    // ユーザ名と最後の投稿者が一致したらメッセージを送信しない
+    if(lastuser==userName){
+        alert("連続投稿できません")
+        return;
+    }
     // 入力されたメッセージを取得
     const input_message = $('#message').val();
 
@@ -19,6 +27,8 @@ function publish() {
     // 時刻をメッセージに追加
     const message = userName + "さん：" + input_message + "（" + formatNowDate + "）";
 
+    // 最後にメッセージを送信したユーザーを変えるイベントの送信
+    socket.emit('sendchangeUserEvent',userName);
     // 投稿内容を送信
     // メッセージ入力イベント（sendMessageEvent）を送信する
     socket.emit('sendMessageEvent', message);
@@ -35,4 +45,9 @@ socket.on('receiveMessageEvent', function (data) {
     }else{
       $('#thread').prepend('<p>' + data + '</p>');
     }
+});
+
+// 最後にメッセージを送信したユーザーを変えるイベントの受信
+socket.on('receivechangeUserEvent', function (user) {
+    lastuser=user;
 });
