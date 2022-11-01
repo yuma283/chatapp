@@ -24,7 +24,7 @@ function publish() {
     var HH = now.getHours();
     var mm = now.getMinutes();
     // 分数の桁揃え
-    if (mm < 10){
+    if (mm < 10) {
         mm = "0" + mm;
     }
     // フォーマットに代入
@@ -34,12 +34,12 @@ function publish() {
         userName + "さん：\n" + input_message + "\n（" + formatNowDate + "）";
     // 投稿内容を送信
     // 内容が空白なら送信しない
-    if(!input_message.match(/\S/g)){
-        alert("内容を記入してください")
+    if (!input_message.match(/\S/g)) {
+        alert("内容を記入してください");
         return;
     }
     // 最後にメッセージを送信したユーザーを変えるイベントの送信
-    socket.emit('sendchangeUserEvent',userName);
+    socket.emit("sendchangeUserEvent", userName);
     // 投稿内容を送信
     // メッセージ入力イベント（sendMessageEvent）を送信する
     socket.emit("sendMessageEvent", message);
