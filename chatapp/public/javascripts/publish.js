@@ -27,8 +27,6 @@ function publish() {
     // 時刻をメッセージに追加
     const message =
         userName + "さん：" + input_message + "（" + formatNowDate + "）";
-    // 最後にメッセージを送信したユーザーを変えるイベントの送信
-    socket.emit("sendchangeUserEvent", userName);
     // 投稿内容を送信
     // 内容が空白なら送信しない
     if(input_message===""){
