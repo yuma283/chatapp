@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="titlename">
         <h1>Node Chat チャットルーム</h1>
     </div>
     <div class="row">
@@ -29,9 +29,10 @@
                     class="common-button room-memo_button"
                     onclick="memo();"
                 />
-                <input type="button" value="stop" onclick="stop();" />
-                <input type="button" value="restart" onclick="restart();" />
+                <input type="button" value="stop" class="common-button room-stop_button" onclick="stop();" />
+                <input type="button" value="restart" class="common-button room-restart_button" onclick="restart();" />
             </div>
+
             <div class="room-thread">
                 <div id="thread"></div>
             </div>
