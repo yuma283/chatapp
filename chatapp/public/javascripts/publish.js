@@ -52,9 +52,9 @@ socket.on("receiveMessageEvent", function (data) {
     const myname = $("#userName").val();
     //自分だったら文字を青く
     if (data.indexOf(myname) !== -1) {
-        $("#thread").prepend('<p style="color:blue">' + data + "</p>");
+        $("#thread").prepend('<p class="chat-my-text">' + data + "</p>");
     } else {
-        $("#thread").prepend("<p>" + data + "</p>");
+        $("#thread").prepend('<p class="chat-your-text">' + data + "</p>");
     }
 });
 

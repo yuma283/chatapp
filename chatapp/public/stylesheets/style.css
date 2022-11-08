@@ -6,7 +6,7 @@ body {
 }
 
 a {
-    color: #00B7FF;
+    color: #00b7ff;
 }
 
 div {
@@ -21,47 +21,46 @@ div {
  * ボタンの共通設定
  */
 .common-button {
-  background: #faa61a;
-  color: #fff;
-  border-radius: 5px;
-  border-color: #faa61a;
-  font-size: 20px;
+    background: #faa61a;
+    color: #fff;
+    border-radius: 5px;
+    border-color: #faa61a;
+    font-size: 20px;
 }
-.common-button:hover{
-  background: #ffbf1f;
+.common-button:hover {
+    background: #ffbf1f;
 }
 
 /*
  * トップ画面（index.hbs）に関する設定
  */
-.container{
-  width: fit-content;
-  height: fit-content;
-  background-color: navajowhite;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container {
+    width: fit-content;
+    height: fit-content;
+    background-color: navajowhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.titlename h1{
-  position: relative;
-  padding: 1.5rem 2rem;
-  color: #fff;
-  border-radius: 10px;
-  background: #faa61a;
+.titlename h1 {
+    position: relative;
+    padding: 1.5rem 2rem;
+    color: #fff;
+    border-radius: 10px;
+    background: #faa61a;
 }
-.titlename h1::after{
-  position: absolute;
-  bottom: -9px;
-  left: 1em;
-  width: 0;
-  height: 0;
-  content: '';
-  border-width: 10px 10px 0 10px;
-  border-style: solid;
-  border-color: #faa61a transparent transparent transparent;
+.titlename h1::after {
+    position: absolute;
+    bottom: -9px;
+    left: 1em;
+    width: 0;
+    height: 0;
+    content: "";
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #faa61a transparent transparent transparent;
 }
 .index-user_name {
-  
 }
 
 .index-user_name_text {
@@ -71,25 +70,24 @@ div {
 }
 
 .index-enter {
-  text-align: center;
+    text-align: center;
 }
 
 .index-enter_button {
-  width: 400px;
-  font-size: 20px;
-  text-align: center;
-  padding: 10px 32px;
+    width: 400px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 32px;
 }
 
 /*
  * チャットルーム画面（room.hbs）に関する設定
  */
 .room-login_user {
-  font-size: 20px;
- }
+    font-size: 20px;
+}
 
 .room-message {
-  
 }
 
 .room-message_textarea {
@@ -98,35 +96,46 @@ div {
 }
 
 .room-submit {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .room-publish_button {
-
 }
 
 .room-memo_button {
-
 }
 
-.room-thread {
-  
+.chat-my-text {
+    background-color: #ffd7a9;
+}
+
+.chat-your-text {
+    text-align: right;
+    background-color: rgb(205, 255, 255);
+}
+
+.chat-your-text:hover {
+    background-color: rgb(0, 242, 255);
+    transition: 0.4s;
+}
+
+.chat-my-text:hover {
+    color: white;
+    background-color: #f67904;
+    transition: 0.4s;
 }
 
 #thread {
-  white-space: pre-wrap;
-  font-size: 20px;
-  background: #fff;
+    white-space: pre-wrap;
+    font-size: 20px;
+    background: #fff;
 }
 
 .room-exit {
-
 }
 
-.room-stop_button{
-  
+.room-stop_button {
 }
 .room-exit_button {
-
 }
