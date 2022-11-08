@@ -106,13 +106,33 @@ div {
 .room-memo_button {
 }
 
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .chat-my-text {
     background-color: #ffd7a9;
+    animation-name: fadeUpAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .chat-your-text {
     text-align: right;
     background-color: rgb(205, 255, 255);
+    animation-name: fadeUpAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .chat-your-text:hover {
