@@ -14,7 +14,7 @@ function restart() {
 
 // サーバから受信したrestartメッセージを画面上に表示する
 socket.on("restartOtherEvent", function (data) {
-    $("#thread").prepend("<p>" + data + "</p>");
+    $("#thread").prepend('<p style="text-align: right">' + data + "</p>");
 });
 socket.on("restartMyselfEvent", function (data) {
     $("#thread").prepend("<p>" + data + "</p>");

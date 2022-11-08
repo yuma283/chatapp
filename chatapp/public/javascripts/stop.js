@@ -13,7 +13,7 @@ function stop() {
 
 // サーバから受信した退室メッセージを画面上に表示する
 socket.on("stopOtherEvent", function (data) {
-    $("#thread").prepend("<p>" + data + "</p>");
+    $("#thread").prepend('<p style="text-align: right">' + data + "</p>");
 });
 socket.on("stopMyselfEvent", function (data) {
     $("#thread").prepend("<p>" + data + "</p>");
